@@ -1,0 +1,45 @@
+{
+  "repos": [
+    {
+      "url": "https://github.com/hfstco/picoquic",
+      "branches": [
+        "careful_resume",
+        "master",
+        "hystart++",
+        "no_jump"
+      ],
+      "compile": [
+        "cmake -DPICOQUIC_FETCH_PTLS=Y .",
+        "make"
+      ]
+    },
+    {
+      "url": "https://github.com/private-octopus/picoquic",
+      "branches": [
+        "master"
+      ],
+      "compile": [
+        "cmake -DPICOQUIC_FETCH_PTLS=Y .",
+        "make"
+      ]
+    },
+    {
+      "url": "https://github.com/cloudflare/quiche",
+      "branches": [
+        "master"
+      ],
+      "compile": [
+        "cargo build --release --features ffi,pkg-config-meta,qlog"
+      ]
+    },
+    {
+      "url": "https://github.com/ana-cc/quiche",
+      "branches": [
+        "master"
+      ],
+      "compile": [
+        "cargo build --release --features ffi,pkg-config-meta,qlog"
+      ]
+    }
+  ]
+}
