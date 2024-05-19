@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install git, jq
+sudo apt install -y git jq
 
 jq -c '.repos[]' repos.json | while read r; do
         url=$(jq -r '.url' <<< $r);
