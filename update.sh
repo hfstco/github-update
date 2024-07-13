@@ -16,7 +16,7 @@ jq -c '.repos[]' repos.json | while read r; do
                 echo "$PWD"
                 git clone --recursive $url .
                 git checkout -b $b
-                git pull
+                git pull origin $b
 
                 #compile
                 jq -r '.compile[]' <<< $r | while read c; do
